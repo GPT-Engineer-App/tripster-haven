@@ -7,6 +7,7 @@ import { format } from "date-fns";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import PropertyCard from "./PropertyCard";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const [checkInDate, setCheckInDate] = useState();
@@ -25,10 +26,10 @@ const Index = () => {
           <div className="text-2xl font-bold text-red-500">Airbnb Clone</div>
           <nav>
             <ul className="flex space-x-4">
-              <li><a href="/" className="text-contrast-medium hover:text-contrast-high">Home</a></li>
-              <li><a href="/explore" className="text-contrast-medium hover:text-contrast-high">Explore</a></li>
-              <li><a href="/my-trips" className="text-contrast-medium hover:text-contrast-high">My Trips</a></li>
-              <li><a href="/login" className="text-contrast-medium hover:text-contrast-high">Login/Signup</a></li>
+              <li><Link to="/" className="text-contrast-medium hover:text-contrast-high">Home</Link></li>
+              <li><Link to="/explore" className="text-contrast-medium hover:text-contrast-high">Explore</Link></li>
+              <li><Link to="/my-trips" className="text-contrast-medium hover:text-contrast-high">My Trips</Link></li>
+              <li><Link to="/login" className="text-contrast-medium hover:text-contrast-high">Login</Link></li>
             </ul>
           </nav>
         </div>
@@ -96,8 +97,8 @@ const Index = () => {
             <div className="w-full md:w-1/4 mb-4 md:mb-0">
               <h3 className="text-lg font-semibold mb-2">Legal</h3>
               <ul className="text-sm">
-                <li><a href="/terms" className="hover:underline">Terms of Service</a></li>
-                <li><a href="/privacy" className="hover:underline">Privacy Policy</a></li>
+                <li><Link to="/terms" className="hover:underline">Terms of Service</Link></li>
+                <li><Link to="/privacy" className="hover:underline">Privacy Policy</Link></li>
               </ul>
             </div>
           </div>

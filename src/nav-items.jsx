@@ -1,8 +1,9 @@
-import { Home, Compass, Briefcase } from "lucide-react";
+import { Home, Compass, Briefcase, LogIn } from "lucide-react";
 import Index from "./pages/Index.jsx";
 import BookingPage from "./pages/BookingPage.jsx";
 import MyTripsPage from "./pages/MyTripsPage.jsx";
 import ListingPage from "./pages/ListingPage.jsx";
+import LoginPage from "./pages/LoginPage.jsx";
 
 export const navItems = [
   {
@@ -28,5 +29,11 @@ export const navItems = [
     to: "/listing/:id",
     icon: null,
     page: <ListingPage />,
+  },
+  {
+    title: "Login",
+    to: "/login",
+    icon: <LogIn className="h-4 w-4" />,
+    page: <LoginPage />,
   },
 ];
