@@ -74,3 +74,28 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Custom styles for better text contrast */
+.text-contrast-high {
+  @apply text-gray-900;
+}
+
+.text-contrast-medium {
+  @apply text-gray-700;
+}
+
+.text-contrast-low {
+  @apply text-gray-600;
+}
+
+.bg-contrast-high {
+  @apply bg-white;
+}
+
+.bg-contrast-medium {
+  @apply bg-gray-100;
+}
+
+.bg-contrast-low {
+  @apply bg-gray-200;
+}

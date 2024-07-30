@@ -20,15 +20,15 @@ const Index = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="bg-white shadow-sm">
+      <header className="bg-contrast-high shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="text-2xl font-bold text-red-500">Airbnb Clone</div>
           <nav>
             <ul className="flex space-x-4">
-              <li><a href="/" className="text-gray-600 hover:text-gray-900">Home</a></li>
-              <li><a href="/explore" className="text-gray-600 hover:text-gray-900">Explore</a></li>
-              <li><a href="/my-trips" className="text-gray-600 hover:text-gray-900">My Trips</a></li>
-              <li><a href="/login" className="text-gray-600 hover:text-gray-900">Login/Signup</a></li>
+              <li><a href="/" className="text-contrast-medium hover:text-contrast-high">Home</a></li>
+              <li><a href="/explore" className="text-contrast-medium hover:text-contrast-high">Explore</a></li>
+              <li><a href="/my-trips" className="text-contrast-medium hover:text-contrast-high">My Trips</a></li>
+              <li><a href="/login" className="text-contrast-medium hover:text-contrast-high">Login/Signup</a></li>
             </ul>
           </nav>
         </div>
@@ -39,8 +39,8 @@ const Index = () => {
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="relative z-10 text-white text-center">
             <h1 className="text-4xl font-bold mb-4">Find your next stay</h1>
-            <div className="bg-white p-4 rounded-lg shadow-lg flex space-x-2">
-              <Input placeholder="Where are you going?" className="flex-grow" />
+            <div className="bg-contrast-high p-4 rounded-lg shadow-lg flex space-x-2">
+              <Input placeholder="Where are you going?" className="flex-grow text-contrast-high" />
               <Popover>
                 <PopoverTrigger asChild>
                   <Button variant="outline" className={cn("w-[180px] justify-start text-left font-normal", !checkInDate && "text-muted-foreground")}>
@@ -63,15 +63,15 @@ const Index = () => {
                   <Calendar mode="single" selected={checkOutDate} onSelect={setCheckOutDate} initialFocus />
                 </PopoverContent>
               </Popover>
-              <Input type="number" placeholder="Guests" className="w-24" />
+              <Input type="number" placeholder="Guests" className="w-24 text-contrast-high" />
               <Button className="bg-red-500 text-white hover:bg-red-600">Search</Button>
             </div>
           </div>
         </section>
 
-        <section className="py-16 bg-gray-100">
+        <section className="py-16 bg-contrast-medium">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8">Featured Listings</h2>
+            <h2 className="text-3xl font-bold mb-8 text-contrast-high">Featured Listings</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredListings.map((listing) => (
                 <PropertyCard key={listing.id} {...listing} />

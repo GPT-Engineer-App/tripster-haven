@@ -21,12 +21,12 @@ const BookingPage = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <img src="/placeholder.svg" alt="Property" className="w-full h-[400px] object-cover rounded-lg mb-4" />
-          <h1 className="text-3xl font-bold mb-4">Luxury Beachfront Villa</h1>
-          <p className="text-gray-600 mb-4">
+          <h1 className="text-3xl font-bold mb-4 text-contrast-high">Luxury Beachfront Villa</h1>
+          <p className="text-contrast-medium mb-4">
             Experience the ultimate beachfront getaway in this stunning villa. Enjoy breathtaking ocean views, private beach access, and luxurious amenities.
           </p>
-          <h2 className="text-xl font-semibold mb-2">Amenities</h2>
-          <ul className="list-disc list-inside mb-4">
+          <h2 className="text-xl font-semibold mb-2 text-contrast-high">Amenities</h2>
+          <ul className="list-disc list-inside mb-4 text-contrast-medium">
             <li>Private pool</li>
             <li>Fully equipped kitchen</li>
             <li>Wi-Fi</li>
@@ -35,8 +35,8 @@ const BookingPage = () => {
           </ul>
         </div>
         <div>
-          <div className="bg-white p-6 rounded-lg shadow-lg mb-8">
-            <h2 className="text-2xl font-bold mb-4">Book Your Stay</h2>
+          <div className="bg-contrast-high p-6 rounded-lg shadow-lg mb-8">
+            <h2 className="text-2xl font-bold mb-4 text-contrast-high">Book Your Stay</h2>
             <div className="space-y-4">
               <div className="flex space-x-4">
                 <Popover>
@@ -62,23 +62,23 @@ const BookingPage = () => {
                   </PopoverContent>
                 </Popover>
               </div>
-              <Input type="number" placeholder="Number of guests" />
+              <Input type="number" placeholder="Number of guests" className="text-contrast-high" />
               <Button className="w-full bg-red-500 text-white hover:bg-red-600">Book Now</Button>
             </div>
           </div>
           <div>
-            <h2 className="text-2xl font-bold mb-4">Reviews</h2>
+            <h2 className="text-2xl font-bold mb-4 text-contrast-high">Reviews</h2>
             {reviews.map((review) => (
-              <div key={review.id} className="mb-4 p-4 bg-gray-100 rounded-lg">
+              <div key={review.id} className="mb-4 p-4 bg-contrast-low rounded-lg">
                 <div className="flex items-center mb-2">
-                  <span className="font-semibold mr-2">{review.author}</span>
+                  <span className="font-semibold mr-2 text-contrast-high">{review.author}</span>
                   <div className="flex">
                     {[...Array(review.rating)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
                 </div>
-                <p>{review.comment}</p>
+                <p className="text-contrast-medium">{review.comment}</p>
               </div>
             ))}
           </div>
