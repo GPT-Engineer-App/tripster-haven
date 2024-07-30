@@ -2,6 +2,7 @@ import { Home, Compass, Briefcase } from "lucide-react";
 import Index from "./pages/Index.jsx";
 import BookingPage from "./pages/BookingPage.jsx";
 import MyTripsPage from "./pages/MyTripsPage.jsx";
+import ListingPage from "./pages/ListingPage.jsx";
 
 export const navItems = [
   {
@@ -21,5 +22,11 @@ export const navItems = [
     to: "/my-trips",
     icon: <Briefcase className="h-4 w-4" />,
     page: <MyTripsPage />,
+  },
+  {
+    title: "Listing",
+    to: "/listing/:id",
+    icon: null,
+    page: <ListingPage />,
   },
 ];
